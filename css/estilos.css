@@ -1,0 +1,344 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.cuerpo{
+    width: 100%;
+    min-width: 350px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*Estilo de cabecera*/
+.cabecera{
+    background: #2674D9;
+    width: 100%;
+    min-width: 350px;
+    height: 80px;
+    display: flex;
+}
+
+.cabecera .cab-izquierdo{
+    width: 50%;
+    text-align: left;
+}
+
+.cabecera .cab-derecho{
+    width: 50%;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.cabecera .cab-izquierdo #logo-cabecera{
+    height: 60px;
+    margin-top: 10px;
+    margin-left: 45px;
+}
+
+.cabecera .boton-entrar{
+    order: 3;
+    background: #292944;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    height: 25px;
+    width: 45px;
+}
+
+.cabecera .boton-crear{
+    order: 2;
+    background: #292944;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    height: 25px;
+    width: 85px;
+    margin-left: 3px;
+}
+
+.cabecera .cab-derecho #miniatura{
+    order: 1;
+    height: 40px;
+    margin-right: 45px;
+    margin-left: 10px;
+}
+
+.cabecera .cab-derecho .btn:hover{
+    background: #A1C2CE;
+    color: #292944;
+}
+
+.menu{
+    background: #292944;
+    height: 38px;
+}
+
+.menu .lista-menu{
+    background: #292944;
+    height: 35px;
+    list-style: none;
+    padding: 0;
+    margin-left: 40px;
+    padding-top: 3px;
+}
+
+.menu li{
+    display: inline-block;
+    text-align: center;
+}
+
+.menu .lista-menu li a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    padding: 5px;
+    display: block;
+}
+
+.menu .lista-menu li a:hover{
+    background: #2674D9;
+}
+
+/*Estilo de contenido*/
+.contenido{
+    background: white;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0px auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas: "columna1 columna2 columna3"
+                         "columna1 columna2 columna3"
+                         "columna1 columna2 columna3";
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows: 33.3% 33.3% 33.3%;
+}
+
+.contenido .columna1 img{
+    width: 80%;
+    max-width: 300px;
+}
+
+.contenido .columna1{
+    grid-area: columna1;
+    width: 98%;
+    height: 430px;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido .columna2{
+    grid-area: columna2;
+    width: 98%;
+    height: 430px;
+    background: white;
+    color: #505050;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido .columna3{
+    grid-area: columna3;
+    width: 98%;
+    height: 430px;
+    background: white;
+    border-radius: 10px;
+    background-image: url(../img/gym.jpg);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.6);
+}
+
+.contenido .columna2 h1{
+    margin-left: 40px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.contenido .columna2 .contenedor-texto{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+}
+
+.contenido .columna2 .descripcion{
+    width: 90%;
+    margin-left: 40px;
+    font-size: 22px;
+}
+
+
+/*Estilo de pie de página*/
+.pie{
+    background: #292944;
+    color: white;
+    width: 100%;
+    min-width: 340px;
+    height:80px;
+    display: flex;
+}
+
+.pie .pie-div{
+    flex: 1;
+}
+
+.pie .pie-div h4{
+    font-size: 12px;
+}
+
+.pie .pie-div p{
+    font-size: 11px;
+}
+
+.pie .div-izquierda{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.pie .div-izquierda .div-domicilio{
+    margin-left: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pie .div-central{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pie .div-derecha{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.pie .div-redes{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.pie .div-derecha .redes{
+    text-align: right;
+    margin-right: 33%;
+}
+.pie .div-derecha .iconos-redes{
+    text-align: right;
+    margin-right: 30%;
+}
+
+.pie .div-derecha .iconos-redes img{
+    width: 30px;
+}
+
+
+/*Para diseño responsivo*/
+
+@media screen and (max-width: 1220px){
+    .contenido .columna2 .descripcion{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1120px){
+    .contenido{
+        grid-template-areas: "columna1 columna1 columna2"
+                             "columna1 columna1 columna2"
+                             "columna3 columna3 columna3";
+        grid-template-columns: 25% 25% 50%;
+    }
+
+    .contenido .columna3{
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .contenido{
+        grid-template-columns: 20% 20% 60%;
+    }
+
+    .pie .div-izquierda .div-domicilio{
+        margin-left: 20%;
+    }
+
+    .pie .div-derecha .redes{
+        margin-right: 23%;
+    }
+
+    .pie .div-derecha .iconos-redes{
+        margin-right: 20%;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .contenido .columna2 .descripcion{
+        font-size: 16px;
+    }
+
+    .pie .pie-div h4{
+        font-size: 10px;
+    }
+
+    .pie .pie-div p{
+        font-size: 9px;
+    }
+
+    .pie .div-derecha .iconos-redes img{
+        width: 22px;
+    }
+}
+
+@media screen and (max-width: 540px){
+    .contenido{
+        grid-template-areas: "columna1 columna1 columna1"
+                             "columna2 columna2 columna2"
+                             "columna3 columna3 columna3";
+        grid-template-columns: 32% 32% 32%;
+    }
+
+    .cabecera .cab-izquierdo{
+        width: 30%;
+    }
+
+    .cabecera .cab-derecho{
+        width: 70%;
+    }
+
+    .cabecera .btn{
+        font-size: 11px;
+    }
+
+    .menu .lista-menu li a{
+        font-size: 12px;
+    }
+
+    .contenido .columna2 .descripcion{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 372px){
+    .contenido .columna2 .descripcion{
+        font-size: 16px;
+    }
+
+
+}
+
